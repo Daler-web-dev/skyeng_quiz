@@ -3,3 +3,132 @@
     margin: 0px;
     box-sizing: border-box;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D4F9FEFF;
+
+    .dino {
+        width: 620px;
+        height: 100%;
+        position: absolute;
+        background-image: url("../img/dino.png");
+        z-index: -1;
+        background-repeat: no-repeat;
+        right: 0;
+
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 75%;
+        height: 110vh;
+        margin-top: 30px;
+
+
+        .header {
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+
+            .left {
+                width: 200px;
+                height: 50px;
+                background-image: url("../img/logo_black.svg");
+                background-repeat: no-repeat;
+            }
+
+            .right a {
+                color: #6F8284FF;
+                margin-right: 25px;
+                font-size: 20px;
+                text-decoration: none;
+            }
+
+            .right a:hover {
+                text-decoration: underline;
+                color: rgb(78, 77, 77);
+            }
+        }
+
+        .main {
+            margin-top: 65px;
+            width: 850px;
+
+            h1 {
+                font-size: 80px;
+
+            }
+
+            p {
+                font-size: 25px;
+                width: 690px;
+
+            }
+        }
+
+        .buttons {
+            margin-top: 25px;
+            display: flex;
+
+            button {
+                width: 310px;
+                height: 141px;
+                font-size: 31px;
+                margin: 8px;
+                padding: 10px;
+                padding-left: 20px;
+                text-align: left;
+                background: none;
+                border: 1px solid #6E8183FF;
+                color: #6E8183FF;
+                border-radius: 20px;
+                transition: .5s ease;
+            }
+
+            .btn:hover {
+                color: #D571FF;
+                border: 1px solid #D571FF;
+            }
+
+            .purple {
+                border: none;
+                color: white;
+                background-color: #A365F7FF;
+
+            }
+
+            .purple:hover {
+                background-color: #D571FF;
+            }
+        }
+
+
+    }
+}
+
+.cont {
+    width: 70%;
+    margin: 20px auto;
+
+    .box {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        .block {
+            display: flex;
+            margin-top: 20px;
+
+            .img {
+                width: 47px;
+                height: 47px;
+            }
+        }
+    }
+}
