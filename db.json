@@ -1,0 +1,380 @@
+{
+	"auido_questions": [
+		{
+			"id": 1,
+			"question": "The woman says that you can travel from Croatia to Germany in two hours by__",
+			"type": "radio_audio",
+			"diolgue": "./assets/audio/listening-test-pt-1.mp3",
+			"options": [
+				{
+					"id": 1,
+					"option": "bus"
+				},
+				{
+					"id": 2,
+					"option": "train"
+				},
+				{
+					"id": 3,
+					"option": "plane"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"question": "Who is the person they’re looking at?",
+			"type": "radio_audio",
+			"diolgue": "./assets/audio/listening-test-pt-2.mp3",
+			"options": [
+				{
+					"id": 1,
+					"option": "the woman's father's older brother"
+				},
+				{
+					"id": 2,
+					"option": "the man's father's older brother"
+				},
+				{
+					"id": 3,
+					"option": "the man's father's younger brother"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"question": " What problem does the man mention?",
+			"type": "radio_audio",
+			"diolgue": "./assets/audio/listening-test-pt-3.mp3",
+			"options": [
+				{
+					"id": 1,
+					"option": "There isn't any more salmon."
+				},
+				{
+					"id": 2,
+					"option": " They don't sell salmon."
+				},
+				{
+					"id": 3,
+					"option": " They only serve fish."
+				}
+			]
+		},
+		{
+			"id": 4,
+			"question": "The woman _________.",
+			"type": "radio_audio",
+			"diolgue": "./assets/audio/listening-test-pt-4.mp3",
+			"options": [
+				{
+					"id": 1,
+					"option": " doesn't want to go anywhere"
+				},
+				{
+					"id": 2,
+					"option": "doesn't feel well"
+				},
+				{
+					"id": 3,
+					"option": "doesn't want to walk far"
+				}
+			]
+		},
+		{
+			"id": 5,
+			"question": " Where are the speakers?",
+			"type": "radio_audio",
+			"diolgue": "./assets/audio/listening-test-pt-5.mp3",
+			"options": [
+				{
+					"id": 1,
+					"option": "a shop"
+				},
+				{
+					"id": 2,
+					"option": "a restaurant"
+				},
+				{
+					"id": 3,
+					"option": "a cinema"
+				}
+			]
+		}
+	],
+	"select_questions": [
+		{
+			"id": 3,
+			"question": "If you match these criteria, contact your manager because you qualify for a salary <@select@>",
+			"translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
+			"type": "select",
+			"options": [
+				{
+					"id": 1,
+					"option": "a team player"
+				},
+				{
+					"id": 2,
+					"option": "a goal-achiever who gives a positive experience to clients"
+				},
+				{
+					"id": 3,
+					"option": "raise"
+				}
+			]
+		},
+		{
+			"id": 4,
+			"question": "• received less than 5% of negative <@select@>",
+			"translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
+			"type": "select",
+			"options": [
+				{
+					"id": 1,
+					"option": "feedback"
+				},
+				{
+					"id": 2,
+					"option": "review"
+				},
+				{
+					"id": 3,
+					"option": "criticism"
+				}
+			]
+		},
+		{
+			"id": 5,
+			"question": "Заполните пропуски и ответьте на вопрос по тексту    ",
+			"type": "select",
+			"options": [
+				{
+					"id": 1,
+					"option": "insurance"
+				},
+				{
+					"id": 2,
+					"option": "security"
+				},
+				{
+					"id": 3,
+					"option": "safety"
+				}
+			]
+		},
+		{
+			"id": 5,
+			"question": "Заполните пропуски и ответьте на вопрос по тексту",
+			"type": "select",
+			"options": [
+				{
+					"id": 1,
+					"option": "profile"
+				},
+				{
+					"id": 2,
+					"option": "link"
+				},
+				{
+					"id": 3,
+					"option": "account"
+				}
+			]
+		},
+		{
+			"id": 6,
+			"question": "Заполните пропуски и ответьте на вопрос по тексту",
+			"type": "select",
+			"options": [
+				{
+					"id": 1,
+					"option": "sound"
+				},
+				{
+					"id": 2,
+					"option": "ring"
+				},
+				{
+					"id": 3,
+					"option": "go"
+				}
+			]
+		},
+		{
+			"id": 7,
+			"question": "Заполните пропуски и ответьте на вопрос по тексту",
+			"type": "select",
+			"options": [
+				{
+					"id": 1,
+					"option": "an opportunity"
+				},
+				{
+					"id": 2,
+					"option": "a circumstance"
+				},
+				{
+					"id": 3,
+					"option": "a possibility"
+				}
+			]
+		},
+		{
+			"id": 8,
+			"question": "Заполните пропуски и ответьте на вопрос по тексту",
+			"type": "select",
+			"options": [
+				{
+					"id": 1,
+					"option": "relocate"
+				},
+				{
+					"id": 2,
+					"option": "shift"
+				},
+				{
+					"id": 3,
+					"option": "carry"
+				}
+			]
+		},
+		{
+			"id": 9,
+			"question": "Заполните пропуски и ответьте на вопрос по тексту",
+			"type": "select",
+			"options": [
+				{
+					"id": 1,
+					"option": "out"
+				},
+				{
+					"id": 2,
+					"option": "up"
+				},
+				{
+					"id": 3,
+					"option": "throught"
+				}
+			]
+		},
+		{
+			"id": 10,
+			"question": "Заполните пропуски и ответьте на вопрос по тексту",
+			"type": "select",
+			"options": [
+				{
+					"id": 1,
+					"option": "needs"
+				},
+				{
+					"id": 2,
+					"option": "demands"
+				},
+				{
+					"id": 3,
+					"option": "requires"
+				}
+			]
+		},
+		{
+			"id": 10,
+			"question": "Заполните пропуски и ответьте на вопрос по тексту",
+			"type": "select",
+			"options": [
+				{
+					"id": 1,
+					"option": "characteristics"
+				},
+				{
+					"id": 2,
+					"option": "traits"
+				},
+				{
+					"id": 3,
+					"option": "features"
+				}
+			]
+		}
+	],
+	"radio_questions": [
+		{
+			"id": 1,
+			"question": "A candidate for the salary increase is",
+			"translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
+			"type": "radio",
+			"options": [
+				{
+					"id": 1,
+					"option": "a team player"
+				},
+				{
+					"id": 2,
+					"option": "a goal-achiever who gives a positive experience to clients"
+				},
+				{
+					"id": 3,
+					"option": "an employee who fulfilled sales plan"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"question": "What does a cow drink",
+			"translate": "что пьет корова",
+			"type": "radio",
+			"options": [
+				{
+					"id": 4,
+					"option": "Milk"
+				},
+				{
+					"id": 5,
+					"option": "water"
+				},
+				{
+					"id": 6,
+					"option": "Cola"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"question": "Literally how to translate",
+			"translate": "Как переводится слово Literally ",
+			"type": "radio",
+			"options": [
+				{
+					"id": 7,
+					"option": "Литература"
+				},
+				{
+					"id": 8,
+					"option": "Книга"
+				},
+				{
+					"id": 9,
+					"option": "В буквальном смысле"
+				}
+			]
+		},
+		{
+			"id": 4,
+			"question": "Ironic how to translate",
+			"translate": "Как переводится слово Ironic ",
+			"type": "radio",
+			"options": [
+				{
+					"id": 10,
+					"option": "Гладить"
+				},
+				{
+					"id": 11,
+					"option": "Железо"
+				},
+				{
+					"id": 12,
+					"option": "Нет правельного ответа"
+				}
+			]
+		}
+	]
+}

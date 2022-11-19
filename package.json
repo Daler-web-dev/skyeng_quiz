@@ -4,11 +4,13 @@
     "description": "",
     "main": "index.html",
     "scripts": {
+        "alish": "concurrently \"gulp\" \"json-server -p 8888 -w db.json\"",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "concurrently": "^7.5.0",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^8.0.0",
         "gulp-clean-css": "^4.3.0",
