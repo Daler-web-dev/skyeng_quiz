@@ -1,0 +1,71 @@
+.quiz-container {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    h1 {
+        font-size: 65px;
+    }
+    .purple {
+        width: fit-content;
+        padding: 20px;
+        cursor: pointer;
+        opacity: 0;
+        transition: .5s ease;
+        visibility: hidden;
+    }
+    .purple-active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+// styles for radio quiz //
+.quiz-container {
+    .radio {
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        cursor: pointer;
+        &:hover {
+            background-color: #DD92FF;
+        }
+    }
+    .radio-active-invalid {
+        background-color: #FFF6F7;
+        color: #FB2B37;
+    }
+    .radio-active-valid {
+        background-color: #EEFFF4;
+        color: #139853;
+    }
+}
+// styles for radio quiz //
+
+// styles for select quiz //
+.quiz-container  {
+    p {
+        font-size: 24px;
+        select {
+            all: unset;
+            background: transparent;
+            padding: 5px;
+            border-bottom: 1px solid black;
+            width: 150px;
+        }
+        select::after {
+            content: "";
+            display: block;
+            color: black;
+            width: 25px;
+            height: 25px;
+            background-image: url('../img/arrow-down.svg');
+            position: absolute;
+        }
+    }
+}
+// styles for select quiz //
+
+// styles for audio quiz //
+// styles for audio quiz //
