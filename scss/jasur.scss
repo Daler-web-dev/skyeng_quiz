@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 
+   
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+ .linkings a {
+   
+    color: grey;
+}
+.linkings a:hover{
+     color: black;
+     transition: 300ms;
+}
+
+body{
+    margin: 0 auto;
+}
+.Descript{
+    margin-left: 10px;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+}
+.mini-block{
+    width: 310px;
+    background-color: #ad61ff;
+    transition: all .2s ease-in-out;
+    color: white;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top:  15px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    height: 140px;
+}
+.mini-block h2 {
+    font-size: 30px;
+}
+.mini-block2 h2 {
+    font-size: 28px;
+}
+.mini-block3 h2 {
+    font-size: 28px;
+}
+.blocks-box{
+    margin-top: 30px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+}
+
+.mini-block2{
+    width: 310px;
+    background-color: #ad61ff;
+    transition: all .2s ease-in-out;
+    color: white;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-top:  15px;
+    padding-bottom: 10px;
+}
+.mini-block3{
+    width: 310px;
+    border: 1px solid gray ;
+    transition: all .2s ease-in-out;
+    color: gray;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-top:  15px;
+    padding-bottom: 10px;
+}
+.mini-block:hover{
+    background-color: #bc83fa;
+    transition: 200ms;
+}
+.mini-block2:hover{
+    background-color: #bc83fa;
+    cursor: pointer;
+    transition: 200ms;
+}
+.mini-block3:hover{
+    transition: 200ms;
+    color: #ad61ff;
+    border: 1px solid #ad61ff;
+    cursor: pointer;
+}
+.down-box{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.link-alone{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.link-alone p {
+    color: gray;
+    font-size: 20px;
+}
+.down-box p {
+    color: grey;
+}
+.linkings{
+    margin-top: 10px;
+}
+.big-box{
+    display: flex;
+    margin-top: 50px;
+}
+.special{
+    margin-top: 30px;
+}
+.linkings a{
+    font-size: 18px;
+}
+.a{
+    margin-left: 10px;
+}
+.href{
+    margin-left: 10px;
+}
+.do{
+    color: grey;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 10px;
+    
+}
+.do:hover {
+    color: black;
+    transition: 300ms;
+    cursor: pointer;
+}
+.link-alone p:hover{
+    color: black;
+    transition: 300ms;
+    cursor: pointer;
+}
