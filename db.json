@@ -150,7 +150,7 @@
     },
     {
       "id": 5,
-      "question": "Заполните пропуски и ответьте на вопрос по тексту    ",
+      "question": "A week ago, our company hired the 5000th employee to the staff. That means that we aren’t a small startup anymore, but a big company. It is time to take care of <@select@>   and move all documentation from personal to corporate emails.",
       "type": "select",
       "options": [
         {
@@ -172,7 +172,7 @@
     },
     {
       "id": 5,
-      "question": "Заполните пропуски и ответьте на вопрос по тексту",
+      "question": "     I got the letter you sent us about the telemarketing system. All conditions in the offer <@select@>    great to us. I just want to double-check a few things with you. You said the system is up-to-date, but what will happen if it is outdated at some point? Do you provide a supporting service?",
       "type": "select",
       "options": [
         {
@@ -194,7 +194,7 @@
     },
     {
       "id": 6,
-      "question": "Заполните пропуски и ответьте на вопрос по тексту",
+      "question": "Most senior leaders of large enterprises state they want to <@select@>     their workforce back to offices after the pandemic. Companies’ executives believe that teams located together build a high-productive work culture.",
       "type": "select",
       "options": [
         {
@@ -216,7 +216,7 @@
     },
     {
       "id": 7,
-      "question": "Заполните пропуски и ответьте на вопрос по тексту",
+      "question": "Nowadays dynamic work environment  <@select@>   a robust leadership pipeline. Leaders are not necessarily born; employees can learn leadership behaviors by making decisions and fully participating in building community.",
       "type": "select",
       "options": [
         {
@@ -232,94 +232,6 @@
         {
           "id": 3,
           "option": "a possibility",
-          "isTrue": true
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "question": "Заполните пропуски и ответьте на вопрос по тексту",
-      "type": "select",
-      "options": [
-        {
-          "id": 1,
-          "option": "relocate",
-          "isTrue": true
-        },
-        {
-          "id": 2,
-          "option": "shift",
-          "isTrue": false
-        },
-        {
-          "id": 3,
-          "option": "carry",
-          "isTrue": false
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "question": "Заполните пропуски и ответьте на вопрос по тексту",
-      "type": "select",
-      "options": [
-        {
-          "id": 1,
-          "option": "out",
-          "isTrue": true
-        },
-        {
-          "id": 2,
-          "option": "up",
-          "isTrue": false
-        },
-        {
-          "id": 3,
-          "option": "throught",
-          "isTrue": false
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "question": "Заполните пропуски и ответьте на вопрос по тексту",
-      "type": "select",
-      "options": [
-        {
-          "id": 1,
-          "option": "needs",
-          "isTrue": true
-        },
-        {
-          "id": 2,
-          "option": "demands",
-          "isTrue": false
-        },
-        {
-          "id": 3,
-          "option": "requires",
-          "isTrue": false
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "question": "Заполните пропуски и ответьте на вопрос по тексту",
-      "type": "select",
-      "options": [
-        {
-          "id": 1,
-          "option": "characteristics",
-          "isTrue": false
-        },
-        {
-          "id": 2,
-          "option": "traits",
-          "isTrue": false
-        },
-        {
-          "id": 3,
-          "option": "features",
           "isTrue": true
         }
       ]
@@ -357,15 +269,18 @@
       "options": [
         {
           "id": 4,
-          "option": "Milk"
+          "option": "Milk",
+          "isTrue": false
         },
         {
           "id": 5,
-          "option": "water"
+          "option": "water",
+          "isTrue": true
         },
         {
           "id": 6,
-          "option": "Cola"
+          "option": "Cola",
+          "isTrue": false
         }
       ]
     },
@@ -377,15 +292,18 @@
       "options": [
         {
           "id": 7,
-          "option": "Литература"
+          "option": "Литература",
+          "isTrue": false
         },
         {
           "id": 8,
-          "option": "Книга"
+          "option": "Книга",
+          "isTrue": false
         },
         {
           "id": 9,
-          "option": "В буквальном смысле"
+          "option": "В буквальном смысле",
+          "isTrue": true
         }
       ]
     },
@@ -397,28 +315,31 @@
       "options": [
         {
           "id": 10,
-          "option": "Гладить"
+          "option": "Гладить",
+          "isTrue": false
         },
         {
           "id": 11,
-          "option": "Железо"
+          "option": "Железо",
+          "isTrue": false
         },
         {
           "id": 12,
-          "option": "Нет правельного ответа"
+          "option": "Нет правельного ответа",
+          "isTrue": true
         }
       ]
     }
   ],
   "userScore": {
-    "trueAnswers": 13,
-    "falseAnswers": 4,
+    "trueAnswers": 33,
+    "falseAnswers": 6,
     "falseAnswersArr": [
       {
-        "id": 3,
-        "question": "If you match these criteria, contact your manager because you qualify for a salary <@select@>",
+        "id": 1,
+        "question": "A candidate for the salary increase is",
         "translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
-        "type": "select",
+        "type": "radio",
         "options": [
           {
             "id": 1,
@@ -432,7 +353,30 @@
           },
           {
             "id": 3,
-            "option": "raise",
+            "option": "an employee who fulfilled sales plan",
+            "isTrue": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "question": "• received less than 5% of negative <@select@>",
+        "translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
+        "type": "select",
+        "options": [
+          {
+            "id": 1,
+            "option": "feedback",
+            "isTrue": true
+          },
+          {
+            "id": 2,
+            "option": "review",
+            "isTrue": false
+          },
+          {
+            "id": 3,
+            "option": "criticism",
             "isTrue": false
           }
         ]
@@ -461,33 +405,55 @@
         ]
       },
       {
-        "id": 3,
-        "question": "If you match these criteria, contact your manager because you qualify for a salary <@select@>",
-        "translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
+        "id": 7,
+        "question": "Nowadays dynamic work environment  <@select@>   a robust leadership pipeline. Leaders are not necessarily born; employees can learn leadership behaviors by making decisions and fully participating in building community.",
         "type": "select",
         "options": [
           {
             "id": 1,
-            "option": "a team player",
+            "option": "an opportunity",
             "isTrue": false
           },
           {
             "id": 2,
-            "option": "a goal-achiever who gives a positive experience to clients",
-            "isTrue": true
+            "option": "a circumstance",
+            "isTrue": false
           },
           {
             "id": 3,
-            "option": "raise",
-            "isTrue": false
+            "option": "a possibility",
+            "isTrue": true
           }
         ]
       },
       {
-        "id": 3,
-        "question": "If you match these criteria, contact your manager because you qualify for a salary <@select@>",
+        "id": 4,
+        "question": "Ironic how to translate",
+        "translate": "Как переводится слово Ironic ",
+        "type": "radio",
+        "options": [
+          {
+            "id": 10,
+            "option": "Гладить",
+            "isTrue": false
+          },
+          {
+            "id": 11,
+            "option": "Железо",
+            "isTrue": false
+          },
+          {
+            "id": 12,
+            "option": "Нет правельного ответа",
+            "isTrue": true
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "question": "A candidate for the salary increase is",
         "translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
-        "type": "select",
+        "type": "radio",
         "options": [
           {
             "id": 1,
@@ -501,7 +467,7 @@
           },
           {
             "id": 3,
-            "option": "raise",
+            "option": "an employee who fulfilled sales plan",
             "isTrue": false
           }
         ]

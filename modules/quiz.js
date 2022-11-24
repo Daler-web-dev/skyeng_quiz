@@ -23,6 +23,7 @@ const setAnswer = async (which, body) => {
 // end
 let p = document.querySelector('p')
 let goOnBtn = document.querySelector('.purple')
+let radioCont = document.querySelector('.radio-container')
 
 const createSelect = (options) => {
     let allOpts = '<option value="def"><option/>'
@@ -43,11 +44,15 @@ const showBtn = () => {
 }
 
 const renderSelectQuestion = (question, user) => {
+    radioCont.innerHTML = ""
+
     let replacedTxt = question.question.replace(/<@select@>/g, `<select>${createSelect(question.options)}<select/>`)
 
     p.innerHTML = `
         ${replacedTxt}:
     `
+
+
 
     let select = document.querySelector('select')
 
@@ -74,61 +79,76 @@ const renderSelectQuestion = (question, user) => {
         });
     }
 }
+const renderRadioQuestion = (question, user) => {
+    p.innerHTML = question.question
+    let trueID
+
+    for (let item of question.options) {
+        let div = document.createElement('div')
+        let span = document.createElement('span')
+
+        div.classList.add('radio')
+        span.innerHTML = item.option
+        div.setAttribute('id', item.id)
+
+        div.append(span)
+        radioCont.append(div)
+
+        if (item.isTrue === true) trueID = question.options.indexOf(item)
+
+        div.onclick = () => {
+            if (item.isTrue) {
+                div.classList.add('radio-active-valid')
+                div.removeAttribute('onclick')
+                setAnswer('/userScore', {
+                        trueAnswers: user.trueAnswers + 1,
+                    })
+                    .then(() => showBtn())
+            } else {
+                div.classList.add('radio-active-invalid')
+                console.log(question.options[trueID]);
+                document.querySelectorAll('.radio')[trueID].classList.add('radio-active-valid')
+                div.removeAttribute('onclick')
+                setAnswer('/userScore', {
+                        falseAnswers: user.falseAnswers + 1,
+                        falseAnswersArr: [...user.falseAnswersArr, question]
+                    })
+                    .then(() => showBtn())
+            }
+        }
+    }
+
+}
 
 
 Promise.all([getQsts('/select_questions'), getQsts('/radio_questions'), getQsts('/userScore')])
     .then(res => {
-        let counter = 1
+        let counter = 0
+        let selectCounter = 1
+        let radioCounter = 0
 
-        let questionTypeOne = res[0][0]
-        let questionTypeTwo = res[1][0]
         let userScore = res[2]
 
 
-        if(counter % 2 === 1) {
+        if (counter % 2 === 0) {
+            let questionTypeOne = res[0][0]
             renderSelectQuestion(questionTypeOne, userScore)
+        } else {
+            let questionTypeTwo = res[1][0]
+            renderRadioQuestion(questionTypeTwo, userScore)
         }
 
         goOnBtn.onclick = () => {
             counter++
-            if(counter % 2 === 1) {
+            if (counter % 2 === 0) {
+                let questionTypeOne = res[0][selectCounter]
                 renderSelectQuestion(questionTypeOne, userScore)
+                selectCounter++
             } else {
-                renderRadioQuestion(questionTypeTwo, userScore)          
+                let questionTypeTwo = res[1][radioCounter]
+                renderRadioQuestion(questionTypeTwo, userScore)
+                radioCounter++
             }
+            goOnBtn.classList.remove('purple-active')
         }
-
-        const renderRadioQuestion = (question, user) => {
-            p.innerHTML = question.question
-            let trueID 
-
-            for(let item of question.options) {
-                let div = document.createElement('div')
-                let span = document.createElement('span')
-
-                div.classList.add('radio')
-                span.innerHTML = item.option
-                div.setAttribute('id', item.id)
-
-                div.append(span)
-                p.after(div)
-
-                if(item.isTrue === true) trueID = question.options.indexOf(item)
-
-                div.onclick = () => {
-                    if(item.isTrue) {
-                        div.classList.add('radio-active-valid')
-                        div.onclick = ""
-                    } else {
-                        div.classList.add('radio-active-invalid')
-                        console.log(question.options[trueID]);
-                        document.querySelectorAll('.radio')[trueID].classList.add('radio-active-valid')
-                        div.onclick = ""
-                    }
-                }
-            }
-
-        }
-
-
     })

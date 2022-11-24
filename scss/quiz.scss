@@ -23,6 +23,14 @@
 
 // styles for radio quiz //
 .quiz-container {
+    .radio-container {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
     .radio {
         background-color: white;
         border-radius: 20px;
