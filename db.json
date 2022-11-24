@@ -4,19 +4,22 @@
       "id": 1,
       "question": "The woman says that you can travel from Croatia to Germany in two hours by__",
       "type": "radio_audio",
-      "diolgue": "./assets/audio/listening-test-pt-1.mp3",
+      "diolgue": "/listening-test-pt-1.mp3",
       "options": [
         {
           "id": 1,
-          "option": "bus"
+          "option": "bus",
+          "isTrue": false
         },
         {
           "id": 2,
-          "option": "train"
+          "option": "train",
+          "isTrue": false
         },
         {
           "id": 3,
-          "option": "plane"
+          "option": "plane",
+          "isTrue": true
         }
       ]
     },
@@ -24,19 +27,22 @@
       "id": 2,
       "question": "Who is the person they’re looking at?",
       "type": "radio_audio",
-      "diolgue": "./assets/audio/listening-test-pt-2.mp3",
+      "diolgue": "/listening-test-pt-2.mp3",
       "options": [
         {
           "id": 1,
-          "option": "the woman's father's older brother"
+          "option": "the woman's father's older brother",
+          "isTrue": false
         },
         {
           "id": 2,
-          "option": "the man's father's older brother"
+          "option": "the man's father's older brother",
+          "isTrue": true
         },
         {
           "id": 3,
-          "option": "the man's father's younger brother"
+          "option": "the man's father's younger brother",
+          "isTrue": false
         }
       ]
     },
@@ -44,19 +50,22 @@
       "id": 3,
       "question": " What problem does the man mention?",
       "type": "radio_audio",
-      "diolgue": "./assets/audio/listening-test-pt-3.mp3",
+      "diolgue": "/listening-test-pt-3.mp3",
       "options": [
         {
           "id": 1,
-          "option": "There isn't any more salmon."
+          "option": "There isn't any more salmon.",
+          "isTrue": true
         },
         {
           "id": 2,
-          "option": " They don't sell salmon."
+          "option": " They don't sell salmon.",
+          "isTrue": false
         },
         {
           "id": 3,
-          "option": " They only serve fish."
+          "option": " They only serve fish.",
+          "isTrue": false
         }
       ]
     },
@@ -64,19 +73,22 @@
       "id": 4,
       "question": "The woman _________.",
       "type": "radio_audio",
-      "diolgue": "./assets/audio/listening-test-pt-4.mp3",
+      "diolgue": "/listening-test-pt-4.mp3",
       "options": [
         {
           "id": 1,
-          "option": " doesn't want to go anywhere"
+          "option": " doesn't want to go anywhere",
+          "isTrue": false
         },
         {
           "id": 2,
-          "option": "doesn't feel well"
+          "option": "doesn't feel well",
+          "isTrue": false
         },
         {
           "id": 3,
-          "option": "doesn't want to walk far"
+          "option": "doesn't want to walk far",
+          "isTrue": true
         }
       ]
     },
@@ -84,19 +96,22 @@
       "id": 5,
       "question": " Where are the speakers?",
       "type": "radio_audio",
-      "diolgue": "./assets/audio/listening-test-pt-5.mp3",
+      "diolgue": "/listening-test-pt-5.mp3",
       "options": [
         {
           "id": 1,
-          "option": "a shop"
+          "option": "a shop",
+          "isTrue": false
         },
         {
           "id": 2,
-          "option": "a restaurant"
+          "option": "a restaurant",
+          "isTrue": true
         },
         {
           "id": 3,
-          "option": "a cinema"
+          "option": "a cinema",
+          "isTrue": false
         }
       ]
     }
@@ -332,7 +347,7 @@
     }
   ],
   "userScore": {
-    "trueAnswers": 33,
+    "trueAnswers": 39,
     "falseAnswers": 6,
     "falseAnswersArr": [
       {
