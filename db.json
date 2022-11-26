@@ -347,28 +347,51 @@
     }
   ],
   "userScore": {
-    "trueAnswers": 8,
-    "falseAnswers": 3,
+    "trueAnswers": 4,
+    "falseAnswers": 7,
     "falseAnswersArr": [
       {
-        "id": 2,
-        "question": "What does a cow drink",
-        "translate": "что пьет корова",
+        "id": 1,
+        "question": "A candidate for the salary increase is",
+        "translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
         "type": "radio",
         "options": [
           {
-            "id": 4,
-            "option": "Milk",
+            "id": 1,
+            "option": "a team player",
             "isTrue": false
           },
           {
-            "id": 5,
-            "option": "water",
+            "id": 2,
+            "option": "a goal-achiever who gives a positive experience to clients",
             "isTrue": true
           },
           {
-            "id": 6,
-            "option": "Cola",
+            "id": 3,
+            "option": "an employee who fulfilled sales plan",
+            "isTrue": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "question": "• received less than 5% of negative <@select@>",
+        "translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
+        "type": "select",
+        "options": [
+          {
+            "id": 1,
+            "option": "feedback",
+            "isTrue": true
+          },
+          {
+            "id": 2,
+            "option": "review",
+            "isTrue": false
+          },
+          {
+            "id": 3,
+            "option": "criticism",
             "isTrue": false
           }
         ]
@@ -396,6 +419,29 @@
         ]
       },
       {
+        "id": 1,
+        "question": "The woman says that you can travel from Croatia to Germany in two hours by__",
+        "type": "radio_audio",
+        "diolgue": "/listening-test-pt-1.mp3",
+        "options": [
+          {
+            "id": 1,
+            "option": "bus",
+            "isTrue": false
+          },
+          {
+            "id": 2,
+            "option": "train",
+            "isTrue": false
+          },
+          {
+            "id": 3,
+            "option": "plane",
+            "isTrue": true
+          }
+        ]
+      },
+      {
         "id": 2,
         "question": "Who is the person they’re looking at?",
         "type": "radio_audio",
@@ -414,6 +460,52 @@
           {
             "id": 3,
             "option": "the man's father's younger brother",
+            "isTrue": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "question": " What problem does the man mention?",
+        "type": "radio_audio",
+        "diolgue": "/listening-test-pt-3.mp3",
+        "options": [
+          {
+            "id": 1,
+            "option": "There isn't any more salmon.",
+            "isTrue": true
+          },
+          {
+            "id": 2,
+            "option": " They don't sell salmon.",
+            "isTrue": false
+          },
+          {
+            "id": 3,
+            "option": " They only serve fish.",
+            "isTrue": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "question": " Where are the speakers?",
+        "type": "radio_audio",
+        "diolgue": "/listening-test-pt-5.mp3",
+        "options": [
+          {
+            "id": 1,
+            "option": "a shop",
+            "isTrue": false
+          },
+          {
+            "id": 2,
+            "option": "a restaurant",
+            "isTrue": true
+          },
+          {
+            "id": 3,
+            "option": "a cinema",
             "isTrue": false
           }
         ]
