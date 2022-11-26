@@ -347,142 +347,73 @@
     }
   ],
   "userScore": {
-    "trueAnswers": 39,
-    "falseAnswers": 6,
+    "trueAnswers": 8,
+    "falseAnswers": 3,
     "falseAnswersArr": [
       {
-        "id": 1,
-        "question": "A candidate for the salary increase is",
-        "translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
+        "id": 2,
+        "question": "What does a cow drink",
+        "translate": "что пьет корова",
         "type": "radio",
         "options": [
           {
-            "id": 1,
-            "option": "a team player",
+            "id": 4,
+            "option": "Milk",
             "isTrue": false
           },
           {
-            "id": 2,
-            "option": "a goal-achiever who gives a positive experience to clients",
+            "id": 5,
+            "option": "water",
             "isTrue": true
           },
           {
-            "id": 3,
-            "option": "an employee who fulfilled sales plan",
+            "id": 6,
+            "option": "Cola",
             "isTrue": false
           }
         ]
       },
       {
-        "id": 4,
-        "question": "• received less than 5% of negative <@select@>",
-        "translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
+        "id": 5,
+        "question": "A week ago, our company hired the 5000th employee to the staff. That means that we aren’t a small startup anymore, but a big company. It is time to take care of <@select@>   and move all documentation from personal to corporate emails.",
         "type": "select",
         "options": [
           {
             "id": 1,
-            "option": "feedback",
-            "isTrue": true
+            "option": "insurance",
+            "isTrue": false
           },
           {
             "id": 2,
-            "option": "review",
+            "option": "security",
             "isTrue": false
           },
           {
             "id": 3,
-            "option": "criticism",
-            "isTrue": false
+            "option": "safety",
+            "isTrue": true
           }
         ]
       },
       {
-        "id": 3,
-        "question": "If you match these criteria, contact your manager because you qualify for a salary <@select@>",
-        "translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
-        "type": "select",
+        "id": 2,
+        "question": "Who is the person they’re looking at?",
+        "type": "radio_audio",
+        "diolgue": "/listening-test-pt-2.mp3",
         "options": [
           {
             "id": 1,
-            "option": "a team player",
+            "option": "the woman's father's older brother",
             "isTrue": false
           },
           {
             "id": 2,
-            "option": "a goal-achiever who gives a positive experience to clients",
+            "option": "the man's father's older brother",
             "isTrue": true
           },
           {
             "id": 3,
-            "option": "raise",
-            "isTrue": false
-          }
-        ]
-      },
-      {
-        "id": 7,
-        "question": "Nowadays dynamic work environment  <@select@>   a robust leadership pipeline. Leaders are not necessarily born; employees can learn leadership behaviors by making decisions and fully participating in building community.",
-        "type": "select",
-        "options": [
-          {
-            "id": 1,
-            "option": "an opportunity",
-            "isTrue": false
-          },
-          {
-            "id": 2,
-            "option": "a circumstance",
-            "isTrue": false
-          },
-          {
-            "id": 3,
-            "option": "a possibility",
-            "isTrue": true
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "question": "Ironic how to translate",
-        "translate": "Как переводится слово Ironic ",
-        "type": "radio",
-        "options": [
-          {
-            "id": 10,
-            "option": "Гладить",
-            "isTrue": false
-          },
-          {
-            "id": 11,
-            "option": "Железо",
-            "isTrue": false
-          },
-          {
-            "id": 12,
-            "option": "Нет правельного ответа",
-            "isTrue": true
-          }
-        ]
-      },
-      {
-        "id": 1,
-        "question": "A candidate for the salary increase is",
-        "translate": "Никакого повышения. Командный игрок — это хорошо, но компания больше ценит тех, кто достигает цели, развивается и получает позитивную обратную связь от клиентов.",
-        "type": "radio",
-        "options": [
-          {
-            "id": 1,
-            "option": "a team player",
-            "isTrue": false
-          },
-          {
-            "id": 2,
-            "option": "a goal-achiever who gives a positive experience to clients",
-            "isTrue": true
-          },
-          {
-            "id": 3,
-            "option": "an employee who fulfilled sales plan",
+            "option": "the man's father's younger brother",
             "isTrue": false
           }
         ]

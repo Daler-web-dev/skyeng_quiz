@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="result">
+        <div class="wrapper">
+            <div class="left">
+                <h1 id="result-score">Lorem, ipsum dolor sit amet consectetur adipisicing.</h1>
+                <p>
+                    А вот поддержать разговор о последнем отчете — задачка уж невыполнимая. Но это пока — вы же здесь!
+                    Мы приготовили кучу интересных материалов, чтобы прокачать язык.
+                    <br> <br>
+                    Получите рекомендации для своего уровня на почту. И обсудите результаты на бесплатном вводном уроке
+                    с методистом Skyeng — он поможет составить подробный план, куда двигаться дальше.
+                </p>
+            </div>
+            <div class="right"></div>
+        </div>
+        <div class="result_view">
+            <h2>Your Mistakes</h2>
+            <div class="mistakes_cont">
+                <div class="item" data-aos="zoom-in-up">
+                    <h3>question</h3>
+                    <div class="wrapper-answ">
+                        <span>answer</span>
+                        <span class="false">wrong asnwer</span>
+                        <span class="false">wrong asnwer</span>
+                        <span class="false">wrong asnwer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../modules/result.js"></script>
+    <script src="../modules/confetti.js"></script>
+    <script>
+        // for starting the confetti 
+
+        const start = () => {
+            setTimeout(function () {
+                confetti.start()
+            }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  for stopping the confetti 
+
+        const stop = () => {
+            setTimeout(function () {
+                confetti.stop()
+            }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+        // after this here we are calling both the function so it works
+        start();
+        stop();
+
+        // if you dont want to make it stop and make it infinite you can just remove the stop function 😊
+    </script>
+</body>
+
+</html>

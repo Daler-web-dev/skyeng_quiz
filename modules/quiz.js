@@ -24,6 +24,7 @@ const setAnswer = async (which, body) => {
 let p = document.querySelector('p')
 let goOnBtn = document.querySelector('.purple')
 let radioCont = document.querySelector('.radio-container')
+let audio_container = document.querySelector('.audio_container')
 
 const createSelect = (options) => {
     let allOpts = '<option value="def"><option/>'
@@ -43,7 +44,9 @@ const showBtn = () => {
     }, 400);
 }
 
-const renderSelectQuestion = (question, user) => {
+const renderSelectQuestion = async (question) => {
+    let user = await getQsts('/userScore')
+        
     radioCont.innerHTML = ""
 
     let replacedTxt = question.question.replace(/<@select@>/g, `<select>${createSelect(question.options)}<select/>`)
@@ -51,8 +54,6 @@ const renderSelectQuestion = (question, user) => {
     p.innerHTML = `
         ${replacedTxt}:
     `
-
-
 
     let select = document.querySelector('select')
 
@@ -79,7 +80,9 @@ const renderSelectQuestion = (question, user) => {
         });
     }
 }
-const renderRadioQuestion = (question, user) => {
+const renderRadioQuestion = async (question) => {
+    let user = await getQsts('/userScore')
+
     p.innerHTML = question.question
     let trueID
 
@@ -120,6 +123,56 @@ const renderRadioQuestion = (question, user) => {
 
 }
 
+const renderAudioQuestion = async (question) => {
+    let user = await getQsts('/userScore')
+
+    audio_container.innerHTML = ""
+    radioCont.innerHTML = ""
+    p.innerHTML = ""
+    let h1 = document.querySelector('h1')
+
+    let audio = document.createElement('audio')
+
+    h1.innerHTML = question.question
+    audio.src = `../audio${question.diolgue}`
+    audio.setAttribute("controls", "controls");
+
+    audio_container.append(audio)
+
+    for (let item of question.options) {
+        let div = document.createElement('div')
+        let span = document.createElement('span')
+
+        div.classList.add('radio')
+        span.innerHTML = item.option
+        div.setAttribute('id', item.id)
+
+        div.append(span)
+        radioCont.append(div)
+
+        if (item.isTrue === true) trueID = question.options.indexOf(item)
+
+        div.onclick = () => {
+            if (item.isTrue) {
+                div.classList.add('radio-active-valid')
+                div.removeAttribute('onclick')
+                setAnswer('/userScore', {
+                        trueAnswers: user.trueAnswers + 1,
+                    })
+                    .then(() => showBtn())
+            } else {
+                div.classList.add('radio-active-invalid')
+                document.querySelectorAll('.radio')[trueID].classList.add('radio-active-valid')
+                div.removeAttribute('onclick')
+                setAnswer('/userScore', {
+                        falseAnswers: user.falseAnswers + 1,
+                        falseAnswersArr: [...user.falseAnswersArr, question]
+                    })
+                    .then(() => showBtn())
+            }
+        }
+    }
+}
 
 Promise.all([getQsts('/select_questions'), getQsts('/radio_questions'), getQsts('/auido_questions'), getQsts('/userScore')])
     .then(res => {
@@ -128,81 +181,36 @@ Promise.all([getQsts('/select_questions'), getQsts('/radio_questions'), getQsts(
         let radioCounter = 0
         let audioCounter = 0
 
-        let userScore = res[3]
-
 
         if (counter % 2 === 0) {
             let questionTypeOne = res[0][0]
-            renderSelectQuestion(questionTypeOne, userScore)
+            renderSelectQuestion(questionTypeOne)
         } else {
             let questionTypeTwo = res[1][0]
-            renderRadioQuestion(questionTypeTwo, userScore)
+            renderRadioQuestion(questionTypeTwo)
         }
 
         goOnBtn.onclick = () => {
             counter++
-            if (counter >= 6) {
+            if(counter >= (res[2].length + 6)) {
+                getQsts('/userScore')
+                    .then(res => {
+                        localStorage.setItem('userResult', JSON.stringify(res))
+                        window.location = "result.html"
+                    })
+            } else if (counter >= 6) {
                 // audio
                 let arr = res[2]
-                const renderAudioQuestion = (question, user) => {
-                    radioCont.innerHTML = ""
-                    p.innerHTML = ""
-                    let h1 = document.querySelector('h1')
-
-                    let audio = document.createElement('audio')
-
-                    h1.innerHTML = question.question
-                    audio.src = `../audio${question.diolgue}`
-                    audio.setAttribute("controls", "controls");
-
-                    radioCont.before(audio)
-
-                    for (let item of question.options) {
-                        let div = document.createElement('div')
-                        let span = document.createElement('span')
-
-                        div.classList.add('radio')
-                        span.innerHTML = item.option
-                        div.setAttribute('id', item.id)
-
-                        div.append(span)
-                        radioCont.append(div)
-
-                        if (item.isTrue === true) trueID = question.options.indexOf(item)
-
-                        div.onclick = () => {
-                            if (item.isTrue) {
-                                div.classList.add('radio-active-valid')
-                                div.removeAttribute('onclick')
-                                setAnswer('/userScore', {
-                                        trueAnswers: user.trueAnswers + 1,
-                                    })
-                                    .then(() => showBtn())
-                                    audioCounter++
-                            } else {
-                                div.classList.add('radio-active-invalid')
-                                console.log(question.options[trueID]);
-                                document.querySelectorAll('.radio')[trueID].classList.add('radio-active-valid')
-                                div.removeAttribute('onclick')
-                                setAnswer('/userScore', {
-                                        falseAnswers: user.falseAnswers + 1,
-                                        falseAnswersArr: [...user.falseAnswersArr, question]
-                                    })
-                                    .then(() => showBtn())
-                                    audioCounter++
-                            }
-                        }
-                    }
-                }
-                renderAudioQuestion(arr[audioCounter], userScore)
+                renderAudioQuestion(arr[audioCounter])
+                audioCounter++
             } else {
                 if (counter % 2 === 0) {
                     let questionTypeOne = res[0][selectCounter]
-                    renderSelectQuestion(questionTypeOne, userScore)
+                    renderSelectQuestion(questionTypeOne)
                     selectCounter++
                 } else {
                     let questionTypeTwo = res[1][radioCounter]
-                    renderRadioQuestion(questionTypeTwo, userScore)
+                    renderRadioQuestion(questionTypeTwo)
                     radioCounter++
                 }
             }
