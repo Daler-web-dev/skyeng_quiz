@@ -1,12 +1,9 @@
-# gulp_vanila_project
-## This is a default project for using a gulp every setting ready to work
+# How to start this project
 
-
-1. You have to just clone this repository then > cd gulp_vanila_project
-2. If you using gulp first time You have to install it global > npm install --global gulp-cli
-3. On the terminal write this **npm install**
-4. On the terminal write **gulp** to start 
-5. If everythink is ok **Just click the star on this repo** 
+1. git clone <link to this repo>
+2. cd skyeng_quiz
+3. then you have to install all packages with command npm install or yarn install
+4. after this y should start project with command npm run alish 
 
 
 # Telegram
